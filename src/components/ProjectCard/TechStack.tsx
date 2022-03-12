@@ -5,10 +5,9 @@ interface TechStackProps {
 }
 
 const TechStackProps: FC<TechStackProps> = ({ stack }) => {
-  console.log('lo que recibe ',stack)
   return (
     <div>
-      {stack.map((tech: string) => <p>{tech}</p>)}
+      {stack.map((tech: string) => <p key={tech}>{tech}</p>)}
     </div>
   )
 }
