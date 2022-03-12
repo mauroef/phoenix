@@ -1,13 +1,11 @@
 import React, { FC } from 'react'
 import { Link } from 'gatsby'
+import { Nav } from './styles'
 
-interface NavProps {
-  // pageTitle: string
-}
 
-const Nav: FC<NavProps> = ({ children }) => {
+const TopNav: FC = () => {
   return (
-    <nav>
+    <Nav>
       <ul>
         <li>
           <Link to='/'>Home</Link>
@@ -19,8 +17,8 @@ const Nav: FC<NavProps> = ({ children }) => {
           <Link to='/projects'>Projects</Link>
         </li>
       </ul>
-    </nav>
+    </Nav>
   )
 }
 
-export default Nav
+export default TopNav
