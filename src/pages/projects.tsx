@@ -20,7 +20,7 @@ const ProjectListPage: FC<ProjectListPageProps> = ({ data, children }) => {
           key={node.id}
           title={node.frontmatter.title || ''}
           description={node.frontmatter.description}
-          body={node.body || ''}
+          stack={node.frontmatter.stack || []}
         />
       ))}
     </Layout>
@@ -40,9 +40,9 @@ export const query = graphql`
           pid
           title
           description
+          stack
         }
         id
-        body
       }
     }
   }
