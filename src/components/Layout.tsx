@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Nav from '../components/Nav'
+import Nav from '../components/TopNav'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
 

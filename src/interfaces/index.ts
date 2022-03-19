@@ -8,5 +8,8 @@ export interface Node {
     demo: string
     repo: string
     stack: string[]
+    avatar?: string
+    name?: string
+    bio?: string
   }
 }
