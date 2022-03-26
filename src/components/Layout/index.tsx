@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Global } from '@emotion/react'
 import { GlobalStyles } from './styles'
-import Nav from '../TopNav'
+import Nav from '../Nav'
 import Main from '../Main'
 import Footer from '../Footer'
 

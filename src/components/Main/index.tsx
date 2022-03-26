@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { MainStyled } from './styles'
 
 interface PorfolioProps {
   pageTitle: string
@@ -6,10 +7,10 @@ interface PorfolioProps {
 
 const Main: FC<PorfolioProps> = ({ pageTitle, children }) => {
   return (
-    <main>
-      <section>page title: {pageTitle}</section>
+    <MainStyled>
       <section>{children}</section>
-    </main>
+      <section>page title: {pageTitle}</section>
+    </MainStyled>
   )
 }
 
