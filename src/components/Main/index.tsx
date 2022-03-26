@@ -8,7 +8,7 @@ interface PorfolioProps {
 const Main: FC<PorfolioProps> = ({ pageTitle, children }) => {
   return (
     <MainStyled>
-      <section>{children}</section>
+      {children}
       <section>page title: {pageTitle}</section>
     </MainStyled>
   )
