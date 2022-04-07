@@ -7,28 +7,38 @@ export const HeaderStyled = styled.header`
   background-image: url('${HomeHero}');
   padding: 7rem 0 3.5rem;
   article {
-    padding: 6rem 1rem;
+    backdrop-filter: blur(0.125rem);
+    background: rgba(9, 18, 37, 0.4);
     border-radius: 1.125rem;
-    h1, h2 {
-      color: #FFF;
+    padding: 6rem 1rem;
+    margin: 0 1rem 0;
+    h1,
+    h2 {
+      color: #fff;
       text-align: center;
     }
     h1 {
       font-size: 2rem;
       font-weight: 600;
+      margin-bottom: 1rem;
     }
     h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 400;
     }
   }
   @media (min-width: 40rem) {
+    padding: 14rem 0 10.5rem;
     article {
-      backdrop-filter: blur(0.125rem);
-      background: rgba(9, 18, 37, 0.4);
       margin: 0 auto;
-      max-width: 30rem;
+      max-width: 35rem;
       padding: 3rem 2rem;
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
     }
   }
 `

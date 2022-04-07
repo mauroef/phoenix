@@ -11,5 +11,7 @@ export interface Node {
     avatar?: string
     name?: string
     bio?: string
+    resume?: string
+    linkedin?: string
   }
 }

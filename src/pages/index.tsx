@@ -14,12 +14,12 @@ interface PortfolioIndexProps {
 
 const PortfolioIndex: FC<PortfolioIndexProps> = ({ data }) => {
   const {
-    frontmatter: { avatar, name, bio },
+    frontmatter: { name, bio },
   } = data.allMdx.nodes[0]
 
   return (
     <Layout pageTitle='home'>
-      <Hero avatar={avatar || ''} name={name || ''} bio={bio || ''} />
+      <Hero name={name || ''} bio={bio || ''} />
     </Layout>
   )
 }
@@ -31,7 +31,6 @@ export const query = graphql`
     allMdx(filter: { fileAbsolutePath: { regex: "/(home)/" } }) {
       nodes {
         frontmatter {
-          avatar
           name
           bio
         }

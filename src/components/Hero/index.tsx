@@ -2,12 +2,11 @@ import React, { FC } from 'react'
 import { HeaderStyled } from './styles'
 
 interface HeroProps {
-  avatar: string
   name: string
   bio: string
 }
 
-const Hero: FC<HeroProps> = ({ avatar, name, bio }) => {
+const Hero: FC<HeroProps> = ({ name, bio }) => {
   return (
     <HeaderStyled>
       <article>

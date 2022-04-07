@@ -29,7 +29,7 @@ export const GlobalStyles = css`
   }
   @media (min-width: 40rem) {
     body {
-      max-width: 64rem;
+      /* max-width: 64rem; */
     }
   }
 `
