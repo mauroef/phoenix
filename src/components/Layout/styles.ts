@@ -27,6 +27,12 @@ export const GlobalStyles = css`
     height: auto;
     max-width: 100%;
   }
+  main {
+    min-height: calc(100vh - 70px);
+  }
+  footer {
+    height: 70px;
+  }
   @media (min-width: 40rem) {
     body {
       /* max-width: 64rem; */

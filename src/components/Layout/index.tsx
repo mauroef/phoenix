@@ -15,7 +15,7 @@ const Layout: FC<LayoutProps> = ({ pageTitle, children }) => {
       <Global styles={GlobalStyles} />
       <Nav />
       <Main pageTitle={pageTitle}>{children}</Main>
-      <Footer></Footer>
+      <Footer />
     </>
   )
 }

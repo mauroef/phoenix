@@ -13,5 +13,6 @@ export interface Node {
     bio?: string
     resume?: string
     linkedin?: string
+    github?: string
   }
 }
