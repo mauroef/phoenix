@@ -8,6 +8,7 @@ export const NavStyled = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 9;
   > div {
     align-items: center;
     display: flex;

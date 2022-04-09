@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
+import { css } from '@emotion/react'
 import Layout from '../components/Layout'
-import ProjectCard from '../components/ProjectCard'
+import Header from '../components/Header'
+import ProjectCard from '../components/Card'
 import { Node } from '../interfaces'
 
 interface ProjectListPageProps {
@@ -12,19 +14,32 @@ interface ProjectListPageProps {
   }
 }
 
+const projectStyles = css`
+  margin: 7rem 0 1rem;
+  padding: 0 1rem;
+  @media (min-width: 40rem) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 75rem;
+  }
+`
+
 const ProjectListPage: FC<ProjectListPageProps> = ({ data, children }) => {
   return (
     <Layout pageTitle='projects'>
-      {data.allMdx.nodes.map((node: Node) => (
-        <ProjectCard
-          key={node.id}
-          title={node.frontmatter.title || ''}
-          description={node.frontmatter.description}
-          demo={node.frontmatter.demo || ''}
-          repo={node.frontmatter.repo || ''}
-          stack={node.frontmatter.stack || []}
-        />
-      ))}
+      <article css={projectStyles}>
+        <Header title={'All Projects.'} subtitle={' Take a look around.'} />
+        {data.allMdx.nodes.map((node: Node) => (
+          <ProjectCard
+            key={node.id}
+            title={node.frontmatter.title || ''}
+            description={node.frontmatter.description}
+            demo={node.frontmatter.demo || ''}
+            repo={node.frontmatter.repo || ''}
+            stack={node.frontmatter.stack || []}
+          />
+        ))}
+      </article>
     </Layout>
   )
 }
