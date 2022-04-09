@@ -9,7 +9,6 @@ const Main: FC<PorfolioProps> = ({ pageTitle, children }) => {
   return (
     <MainStyled>
       {children}
-      <section>page title: {pageTitle}</section>
     </MainStyled>
   )
 }

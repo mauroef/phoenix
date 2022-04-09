@@ -47,6 +47,13 @@ export const FooterStyled = styled.footer`
         a {
           font-size: 1rem;
         }
+      }
+    }
+    > p {
+      line-height: 3rem;
+      margin-top: 0;
+      min-width: 23rem;
+      text-align: left;
     }
   }
 `

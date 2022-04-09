@@ -28,14 +28,17 @@ export const GlobalStyles = css`
     max-width: 100%;
   }
   main {
-    min-height: calc(100vh - 5rem);
+    min-height: calc(100vh - 7.5625rem);
   }
   footer {
-    height: 5rem;
+    height: 7.5625rem;
   }
   @media (min-width: 40rem) {
-    body {
-      /* max-width: 64rem; */
+    main {
+      min-height: calc(100vh - 5rem);
+    }
+    footer {
+      height: 5rem;
     }
   }
 `

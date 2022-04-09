@@ -14,7 +14,7 @@ interface AboutPageProps {
 }
 
 const aboutStyles = css`
-  margin: 7rem 1rem 0 1rem;
+  margin: 7rem 1rem 1rem;
   background-color: #fff;
   border-radius: 1.125rem;
   padding: 3rem 2rem;
