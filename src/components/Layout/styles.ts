@@ -28,10 +28,10 @@ export const GlobalStyles = css`
     max-width: 100%;
   }
   main {
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 5rem);
   }
   footer {
-    height: 70px;
+    height: 5rem;
   }
   @media (min-width: 40rem) {
     body {

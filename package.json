@@ -20,6 +20,7 @@
     "@emotion/styled": "^11.8.1",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "emotion-icons": "^3.27.0",
     "gatsby": "^4.9.2",
     "gatsby-plugin-emotion": "^7.9.0",
     "gatsby-plugin-google-analytics": "^4.9.0",
