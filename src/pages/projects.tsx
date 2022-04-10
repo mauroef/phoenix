@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { css } from '@emotion/react'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
-import ProjectCard from '../components/Card'
+import Card from '../components/Card'
 import { Node } from '../interfaces'
 
 interface ProjectListPageProps {
@@ -30,13 +30,14 @@ const ProjectListPage: FC<ProjectListPageProps> = ({ data, children }) => {
       <article css={projectStyles}>
         <Header title={'All Projects.'} subtitle={' Take a look around.'} />
         {data.allMdx.nodes.map((node: Node) => (
-          <ProjectCard
+          <Card
             key={node.id}
             title={node.frontmatter.title || ''}
             description={node.frontmatter.description}
             demo={node.frontmatter.demo || ''}
             repo={node.frontmatter.repo || ''}
             stack={node.frontmatter.stack || []}
+            image={node.frontmatter.image}
           />
         ))}
       </article>
@@ -53,6 +54,7 @@ export const query = graphql`
       sort: { fields: frontmatter___pid, order: DESC }
     ) {
       nodes {
+        id
         frontmatter {
           pid
           title
@@ -60,8 +62,12 @@ export const query = graphql`
           demo
           repo
           stack
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
-        id
       }
     }
   }

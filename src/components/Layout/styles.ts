@@ -27,17 +27,17 @@ export const GlobalStyles = css`
     height: auto;
     max-width: 100%;
   }
-  main {
+  nav + main {
     min-height: calc(100vh - 7.5625rem);
   }
-  footer {
+  nav + main + footer {
     height: 7.5625rem;
   }
   @media (min-width: 40rem) {
-    main {
+    nav + main {
       min-height: calc(100vh - 5rem);
     }
-    footer {
+    nav + main + footer {
       height: 5rem;
     }
   }

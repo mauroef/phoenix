@@ -31,15 +31,15 @@ export const FooterStyled = styled.footer`
     max-width: 75rem;
     > ul {
       li {
-        &:first-child {
+        &:first-of-type {
           a:hover {
             color: #007aff;
           }
         }
-        &:nth-child(2) {
+        &:nth-of-type(2) {
           margin: 0 2rem;
         }
-        &:nth-child(3) {
+        &:nth-of-type(3) {
           a:hover {
             color: #FF2D55;
           }

@@ -14,5 +14,6 @@ export interface Node {
     resume?: string
     linkedin?: string
     github?: string
+    image: any
   }
 }

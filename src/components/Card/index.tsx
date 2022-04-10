@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import ButtonGroup from './ButtonGroup'
 import TechStack from './TechStack'
 import { ArticleStyled } from './styles'
+import ED from '../../images/projects/electronica-dylon.png'
 // import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 interface ProjectCardProps {
@@ -10,6 +12,7 @@ interface ProjectCardProps {
   demo: string
   repo: string
   stack: string[]
+  image: any
 }
 
 const Card: FC<ProjectCardProps> = ({
@@ -18,18 +21,24 @@ const Card: FC<ProjectCardProps> = ({
   demo,
   repo,
   stack,
+  image,
 }) => {
+  const imageSource = getImage(image)
+
   return (
     <ArticleStyled>
       <header>
         <h2>{title}</h2>
       </header>
-      <div>
+      <main>
+        {imageSource !== undefined && (
+          <GatsbyImage image={imageSource} alt={'alt imagen'} />
+        )}
         {/* image */}
         {/* TODO: into modal */}
-        <p>{description}</p>
-        <TechStack stack={stack} />
-      </div>
+        {/* <p>{description}</p>
+        <TechStack stack={stack} /> */}
+      </main>
       <footer>
         <ButtonGroup demo={demo} repo={repo} />
       </footer>
