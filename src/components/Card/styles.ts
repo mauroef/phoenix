@@ -22,25 +22,20 @@ export const ArticleStyled = styled.article`
       justify-content: space-around;
       a {
         padding: 0.4688rem 1.25rem;
-        border: 0.0625rem solid;
         border-radius: 0.375rem;
-        font-weight: 300;
+        font-weight: 400;
         text-align: center;
         text-decoration: none;
         &:first-of-type {
           background: #007aff;
-          border-color: #007aff;
           color: #fff;
           margin-bottom: 1rem;
         }
         &:nth-of-type(2) {
-          background: #34c759;
-          border-color: #34c759;
-          color: #fff;
+          background: #c4e0ff;
+          color: #007aff;
         }
         &:hover {
-          color: #fff;
-          font-weight: 500;
           transition: 0.5s;
         }
       }
@@ -56,21 +51,11 @@ export const ArticleStyled = styled.article`
         flex-direction: row;
         a {
           &:first-of-type {
-            background: transparent;
-            color: #007aff;
             margin-bottom: 0;
-            &:hover {
-              background: #007aff;
-              color: #fff;
-            }
           }
-          &:nth-of-type(2) {
-            color: #34c759;
-            background: transparent;
-            &:hover {
-              background: #34c759;
-              color: #fff;
-            }
+          &:hover,
+          &:active {
+            filter: brightness(90%);
           }
         }
       }

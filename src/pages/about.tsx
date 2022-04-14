@@ -24,6 +24,9 @@ const aboutStyles = css`
     margin-bottom: 1rem;
     text-align: center;
   }
+  p {
+    line-height: 1.5rem;
+  }
   div {
     margin-bottom: 1rem;
     img {
@@ -49,6 +52,8 @@ const aboutStyles = css`
     }
     p {
       font-size: 1.2rem;
+      line-height: 2rem;
+      text-align: justify;
     }
   }
 `
