@@ -20,8 +20,10 @@ const projectStyles = css`
   @media (min-width: 40rem) {
     margin-right: auto;
     margin-left: auto;
-    padding: 0;
     max-width: 75rem;
+  }
+  @media (min-width: 78rem) {
+    padding: 0;
   }
 `
 

@@ -28,21 +28,15 @@ export const ArticleStyled = styled.article`
         text-align: center;
         text-decoration: none;
         &:first-of-type {
-          background: transparent;
+          background: #007aff;
           border-color: #007aff;
-          color: #007aff;
+          color: #fff;
           margin-bottom: 1rem;
-          &:hover {
-            background: #007aff;
-          }
         }
         &:nth-of-type(2) {
-          background: transparent;
+          background: #34c759;
           border-color: #34c759;
-          color: #34c759;
-          &:hover {
-            background: #34c759;
-          }
+          color: #fff;
         }
         &:hover {
           color: #fff;
@@ -62,7 +56,21 @@ export const ArticleStyled = styled.article`
         flex-direction: row;
         a {
           &:first-of-type {
+            background: transparent;
+            color: #007aff;
             margin-bottom: 0;
+            &:hover {
+              background: #007aff;
+              color: #fff;
+            }
+          }
+          &:nth-of-type(2) {
+            color: #34c759;
+            background: transparent;
+            &:hover {
+              background: #34c759;
+              color: #fff;
+            }
           }
         }
       }

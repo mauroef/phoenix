@@ -29,8 +29,6 @@ export const FooterStyled = styled.footer`
     justify-content: space-between;
     margin: 0 auto;
     max-width: 75rem;
-    padding-right: 0;
-    padding-left: 0;
     > ul {
       li {
         &:first-of-type {
@@ -57,5 +55,9 @@ export const FooterStyled = styled.footer`
       min-width: 23rem;
       text-align: left;
     }
+  }
+  @media (min-width: 78rem) {
+    padding-right: 0;
+    padding-left: 0;
   }
 `
