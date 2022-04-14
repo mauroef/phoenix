@@ -4,13 +4,15 @@ export const ArticleStyled = styled.article`
   background-color: #fff;
   border-radius: 1.125rem;
   box-shadow: 0.125rem 0.25rem 0.75rem rgb(0 0 0 / 8%);
-  margin-bottom: 2rem;
   transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
   header {
     padding: 1.75rem 1.75rem 0;
     h2 {
       font-size: 22px;
     }
+  }
+  main {
+    padding: 2rem 6rem;
   }
   footer {
     padding: 0 1.75rem 1.75rem;
@@ -39,7 +41,7 @@ export const ArticleStyled = styled.article`
           border-color: #34c759;
           color: #34c759;
           &:hover {
-            background: #34C759;
+            background: #34c759;
           }
         }
         &:hover {

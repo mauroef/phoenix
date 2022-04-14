@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const HeaderStyled = styled.header`
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   h1,
   span {
     display: inline;

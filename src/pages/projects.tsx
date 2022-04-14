@@ -3,10 +3,10 @@ import { graphql } from 'gatsby'
 import { css } from '@emotion/react'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
-import Card from '../components/Card'
+import List from '../components/List'
 import { Node } from '../interfaces'
 
-interface ProjectListPageProps {
+interface ProjectPageProps {
   data: {
     allMdx: {
       nodes: Array<Node>
@@ -20,32 +20,23 @@ const projectStyles = css`
   @media (min-width: 40rem) {
     margin-right: auto;
     margin-left: auto;
+    padding: 0;
     max-width: 75rem;
   }
 `
 
-const ProjectListPage: FC<ProjectListPageProps> = ({ data, children }) => {
+const ProjectPage: FC<ProjectPageProps> = ({ data }) => {
   return (
     <Layout pageTitle='projects'>
       <article css={projectStyles}>
-        <Header title={'All Projects.'} subtitle={' Take a look around.'} />
-        {data.allMdx.nodes.map((node: Node) => (
-          <Card
-            key={node.id}
-            title={node.frontmatter.title || ''}
-            description={node.frontmatter.description}
-            demo={node.frontmatter.demo || ''}
-            repo={node.frontmatter.repo || ''}
-            stack={node.frontmatter.stack || []}
-            image={node.frontmatter.image}
-          />
-        ))}
+        <Header title={'All Projects.'} subtitle={' Take a look.'} />
+        <List items={data} />
       </article>
     </Layout>
   )
 }
 
-export default ProjectListPage
+export default ProjectPage
 
 export const query = graphql`
   query {

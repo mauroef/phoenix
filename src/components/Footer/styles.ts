@@ -29,6 +29,8 @@ export const FooterStyled = styled.footer`
     justify-content: space-between;
     margin: 0 auto;
     max-width: 75rem;
+    padding-right: 0;
+    padding-left: 0;
     > ul {
       li {
         &:first-of-type {
@@ -41,7 +43,7 @@ export const FooterStyled = styled.footer`
         }
         &:nth-of-type(3) {
           a:hover {
-            color: #FF2D55;
+            color: #ff2d55;
           }
         }
         a {
