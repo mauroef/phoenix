@@ -1,20 +1,38 @@
 import React, { FC } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import { HeaderStyled } from './styles'
 
-interface HeroProps {
-  name: string
-  bio: string
-}
+const Hero: FC = () => {
+  const {
+    allMdx: { nodes },
+  } = useStaticQuery(query)
 
-const Hero: FC<HeroProps> = ({ name, bio }) => {
   return (
-    <HeaderStyled>
-      <article>
-        <h1>{name}</h1>
-        <h2>{bio}</h2>
-      </article>
-    </HeaderStyled>
+    <>
+      {nodes && (
+        <HeaderStyled>
+          <article>
+            <h1>{nodes[0].frontmatter.name}</h1>
+            <h2>{nodes[0].frontmatter.bio}</h2>
+          </article>
+        </HeaderStyled>
+      )}
+    </>
   )
 }
 
 export default Hero
+
+export const query = graphql`
+  query {
+    allMdx(filter: { fileAbsolutePath: { regex: "/(home)/" } }) {
+      nodes {
+        frontmatter {
+          name
+          bio
+        }
+        id
+      }
+    }
+  }
+`

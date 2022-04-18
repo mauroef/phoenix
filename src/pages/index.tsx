@@ -2,40 +2,14 @@ import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
-import { Node } from '../interfaces'
 
-interface PortfolioIndexProps {
-  data: {
-    allMdx: {
-      nodes: Array<Node>
-    }
-  }
-}
-
-const PortfolioIndex: FC<PortfolioIndexProps> = ({ data }) => {
-  const {
-    frontmatter: { name, bio },
-  } = data.allMdx.nodes[0]
-
+const PortfolioIndex: FC = () => {
   return (
     <Layout pageTitle='home'>
-      <Hero name={name || ''} bio={bio || ''} />
+      <Hero />
     </Layout>
   )
 }
 
 export default PortfolioIndex
 
-export const query = graphql`
-  query {
-    allMdx(filter: { fileAbsolutePath: { regex: "/(home)/" } }) {
-      nodes {
-        frontmatter {
-          name
-          bio
-        }
-        id
-      }
-    }
-  }
-`
