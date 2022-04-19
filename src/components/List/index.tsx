@@ -15,7 +15,7 @@ interface ListProps {
 const List: FC<ListProps> = ({ items }) => {
   return (
     <ListStyled>
-      <Fade cascade direction='up' fraction={0.6} triggerOnce>
+      <Fade cascade direction='up' fraction={0.1} triggerOnce>
         {items.allMdx.nodes.map((node: Node) => (
           <Card
             key={node.id}

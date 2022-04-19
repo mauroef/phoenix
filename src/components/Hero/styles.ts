@@ -5,7 +5,7 @@ export const HeaderStyled = styled.header`
   background: #0a0b0c no-repeat center center;
   background-size: cover;
   background-image: url('${HomeHero}');
-  padding: 7rem 0 3.5rem;
+  padding: 10.5rem 0 7rem;
   article {
     backdrop-filter: blur(0.125rem);
     background: rgba(9, 18, 37, 0.4);

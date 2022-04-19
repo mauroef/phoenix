@@ -33,7 +33,7 @@ const PortfolioIndex: FC<IndexPageProps> = ({ data }) => {
     <Layout pageTitle='home'>
       <Hero />
       <article css={indexStyles}>
-        <Header title={'Projects.'} subtitle={' Top 3'} />
+        <Header title={'Projects.'} subtitle={' Top 3.'} />
         <List items={data} />
       </article>
     </Layout>
