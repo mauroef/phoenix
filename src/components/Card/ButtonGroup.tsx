@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { FlowMerge, Eye } from '@emotion-icons/typicons'
 
 interface ButtonGroupProps {
   repo: string
@@ -6,21 +7,26 @@ interface ButtonGroupProps {
 }
 
 const ButtonGroup: FC<ButtonGroupProps> = ({ repo, demo }) => {
-  // FIXME: use pointer events none if repo / demo is empty
+  const isRepoAvailable = repo !== ''
+  const isDemoAvailable = demo !== ''
+
   return (
     <div>
       <a
-        href={demo !== '' ? demo : '#'}
-        target={demo !== '' ? '_blank' : '_self'}
+        href={isRepoAvailable ? repo : '#'}
+        target={isRepoAvailable ? '_blank' : '_self'}
+        className={isRepoAvailable ? '' : 'not-available'}
       >
-        {' '}
-        View Repo
+        <FlowMerge size='23' />
+        <span>Repo</span>
       </a>
       <a
-        href={repo !== '' ? repo : '#'}
-        target={repo !== '' ? '_blank' : '_self'}
+        href={isDemoAvailable ? demo : '#'}
+        target={isDemoAvailable ? '_blank' : '_self'}
+        className={isDemoAvailable ? '' : 'not-available'}
       >
-        Demo
+        <Eye size='23' />
+        <span>Demo</span>
       </a>
     </div>
   )

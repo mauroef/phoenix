@@ -38,6 +38,15 @@ export const ArticleStyled = styled.article`
         &:hover {
           transition: 0.5s;
         }
+        &.not-available {
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+        span {
+          vertical-align: middle;
+          margin-left: 0.1rem;
+        }
       }
     }
   }
