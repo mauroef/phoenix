@@ -2,7 +2,11 @@
 module.exports = {
   siteMetadata: {
     title: `Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.mauroef.dev`,
+    description: `Welcome to my Personal Portfolio`,
+    linkedin: `https://www.linkedin.com/in/mauroef`,
+    github: `https://github.com/mauroef`,
+    resume: `https://bit.ly/2XQmPxS`,
   },
   plugins: [
     'gatsby-plugin-emotion',

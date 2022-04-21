@@ -1,10 +1,12 @@
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
+import { css } from '@emotion/react'
 import Layout from '../components/Layout'
-import ProjectCard from '../components/ProjectCard'
+import Header from '../components/Header'
+import List from '../components/List'
 import { Node } from '../interfaces'
 
-interface ProjectListPageProps {
+interface ProjectPageProps {
   data: {
     allMdx: {
       nodes: Array<Node>
@@ -12,22 +14,31 @@ interface ProjectListPageProps {
   }
 }
 
-const ProjectListPage: FC<ProjectListPageProps> = ({ data, children }) => {
+const projectStyles = css`
+  margin: 7rem 0 1rem;
+  padding: 0 1rem;
+  @media (min-width: 40rem) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 75rem;
+  }
+  @media (min-width: 78rem) {
+    padding: 0;
+  }
+`
+
+const ProjectPage: FC<ProjectPageProps> = ({ data }) => {
   return (
     <Layout pageTitle='projects'>
-      {data.allMdx.nodes.map((node: Node) => (
-        <ProjectCard
-          key={node.id}
-          title={node.frontmatter.title || ''}
-          description={node.frontmatter.description}
-          body={node.body || ''}
-        />
-      ))}
+      <article css={projectStyles}>
+        <Header title={'All Projects.'} subtitle={' Take a look.'} />
+        <List items={data} />
+      </article>
     </Layout>
   )
 }
 
-export default ProjectListPage
+export default ProjectPage
 
 export const query = graphql`
   query {
@@ -36,13 +47,20 @@ export const query = graphql`
       sort: { fields: frontmatter___pid, order: DESC }
     ) {
       nodes {
+        id
         frontmatter {
           pid
           title
           description
+          demo
+          repo
+          stack
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
-        id
-        body
       }
     }
   }

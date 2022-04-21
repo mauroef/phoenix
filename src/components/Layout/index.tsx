@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
-import Nav from '../components/Nav'
-import Main from '../components/Main'
-import Footer from '../components/Footer'
+import { Global } from '@emotion/react'
+import { GlobalStyles } from './styles'
+import Nav from '../Nav'
+import Main from '../Main'
+import Footer from '../Footer'
 
 interface LayoutProps {
   pageTitle: string
@@ -10,9 +12,10 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ pageTitle, children }) => {
   return (
     <>
-      <Nav></Nav>
+      <Global styles={GlobalStyles} />
+      <Nav />
       <Main pageTitle={pageTitle}>{children}</Main>
-      <Footer></Footer>
+      <Footer />
     </>
   )
 }
