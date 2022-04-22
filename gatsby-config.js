@@ -22,7 +22,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: `Personal Portfolio`,
+        short_name: `Portfolio`,
+        description: `Hi, I'm Mauro, welcome to my Personal Portfolio.`,
+        lang: 'en',
+        display: `standalone`,
         icon: 'src/images/icon.png',
+        start_url: `/`,
+        background_color: `#1d1d1f`,
+        theme_color: `#f5f5f7`,
       },
     },
     'gatsby-plugin-mdx',
