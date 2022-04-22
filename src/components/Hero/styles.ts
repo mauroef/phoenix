@@ -27,6 +27,13 @@ export const HeaderStyled = styled.header`
       font-weight: 400;
     }
   }
+  @media screen and (orientation: portrait) {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    padding: 0;
+  }
   @media (min-width: 40rem) {
     padding: 14rem 0 10.5rem;
     article {
