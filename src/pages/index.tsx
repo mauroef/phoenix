@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import { css } from '@emotion/react'
+import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import Header from '../components/Header'
@@ -31,6 +32,7 @@ const indexStyles = css`
 const PortfolioIndex: FC<IndexPageProps> = ({ data }) => {
   return (
     <Layout pageTitle='home'>
+      <Seo title='Home' />
       <Hero />
       <article css={indexStyles}>
         <Header title={'Projects.'} subtitle={' Top 3.'} />

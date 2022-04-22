@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Portfolio`,
     siteUrl: `https://www.mauroef.dev`,
-    description: `Welcome to my Personal Portfolio`,
+    description: `Hi, I'm Mauro, welcome to my Personal Portfolio.`,
     linkedin: `https://www.linkedin.com/in/mauroef`,
     github: `https://github.com/mauroef`,
     resume: `https://bit.ly/2XQmPxS`,
@@ -22,7 +22,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
+        name: `Personal Portfolio`,
+        short_name: `Portfolio`,
+        description: `Hi, I'm Mauro, welcome to my Personal Portfolio.`,
+        lang: 'en',
+        display: `standalone`,
         icon: 'src/images/icon.png',
+        start_url: `/`,
+        background_color: `#1d1d1f`,
+        theme_color: `#f5f5f7`,
       },
     },
     'gatsby-plugin-mdx',

@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import { css } from '@emotion/react'
+import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 import Header from '../components/Header'
 import List from '../components/List'
@@ -30,6 +31,7 @@ const projectStyles = css`
 const ProjectPage: FC<ProjectPageProps> = ({ data }) => {
   return (
     <Layout pageTitle='projects'>
+      <Seo title='Projects' />
       <article css={projectStyles}>
         <Header title={'All Projects.'} subtitle={' Take a look.'} />
         <List items={data} />
