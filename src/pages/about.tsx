@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
 import { css, jsx } from '@emotion/react'
+import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 import { Node } from '../interfaces'
 import Avatar from '../images/avatar.jpg'
@@ -61,6 +62,7 @@ const aboutStyles = css`
 const AboutPage: FC<AboutPageProps> = ({ data }) => {
   return (
     <Layout pageTitle='about'>
+      <Seo title='About' />
       <article css={aboutStyles}>
         <header>
           <h1>About</h1>
