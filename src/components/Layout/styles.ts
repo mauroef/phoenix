@@ -32,13 +32,15 @@ export const GlobalStyles = css`
   }
   nav + main + footer {
     height: 7.5625rem;
+    margin-bottom: 3.5rem;
   }
   @media (min-width: 40rem) {
     nav + main {
-      min-height: calc(100vh - 5rem);
+      min-height: calc(100vh - 12rem);
     }
     nav + main + footer {
       height: 5rem;
+      margin-bottom: 0;
     }
   }
 `

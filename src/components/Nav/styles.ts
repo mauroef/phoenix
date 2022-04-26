@@ -1,8 +1,8 @@
 import styled from '@emotion/styled'
 
 export const NavStyled = styled.nav`
-  backdrop-filter: blur(0.125rem);
-  background: rgba(9, 18, 37, 0.4);
+  backdrop-filter: saturate(180%) blur(1.25rem);
+  background: rgba(0, 0, 0, 0.8);
   bottom: 0;
   height: 3.5rem;
   padding: 0 1rem;
@@ -37,20 +37,19 @@ export const NavStyled = styled.nav`
           font-size: 0.625rem;
           font-weight: 400;
           min-width: 5rem;
-          padding: 0.125rem 0;
+          padding: 0;
           text-decoration: none;
           &:hover {
             background-color: #1d1d1f;
             border-color: #1d1d1f;
             color: #fff;
-            font-weight: 600;
             transition: 0.3s;
           }
         }
       }
     }
   }
-  @media screen and (min-width: 40rem) and (orientation: landscape) {
+  @media screen and (min-width: 40rem) {
     top: 0;
     bottom: inherit;
     > div {
