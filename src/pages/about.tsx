@@ -15,7 +15,7 @@ interface AboutPageProps {
 }
 
 const aboutStyles = css`
-  margin: 7rem 1rem 1rem;
+  margin: 3.5rem 1rem 1rem;
   background-color: #fff;
   border-radius: 1.125rem;
   padding: 3rem 2rem;
@@ -43,8 +43,8 @@ const aboutStyles = css`
       font-weight: 500;
     }
   }
-
   @media (min-width: 40rem) {
+    margin-top: 7rem;
     margin-right: auto;
     margin-left: auto;
     max-width: 40rem;

@@ -8,14 +8,29 @@ export const FooterStyled = styled.footer`
   > ul {
     display: flex;
     justify-content: space-around;
-    li a {
-      color: #6e6e73;
-      font-size: 0;
-      text-decoration: none;
-      &:hover {
-        color: #1d1d1f;
-        font-weight: 600;
-        transition: 0.3s;
+    li {
+      &:first-of-type {
+        a:hover {
+          color: #007aff;
+        }
+      }
+      &:nth-of-type(2) {
+        margin: 0 2rem;
+      }
+      &:nth-of-type(3) {
+        a:hover {
+          color: #ff2d55;
+        }
+      }
+      a {
+        color: #6e6e73;
+        font-size: 0;
+        text-decoration: none;
+        &:hover {
+          color: #1d1d1f;
+          font-weight: 600;
+          transition: 0.3s;
+        }
       }
     }
   }
@@ -31,19 +46,6 @@ export const FooterStyled = styled.footer`
     max-width: 75rem;
     > ul {
       li {
-        &:first-of-type {
-          a:hover {
-            color: #007aff;
-          }
-        }
-        &:nth-of-type(2) {
-          margin: 0 2rem;
-        }
-        &:nth-of-type(3) {
-          a:hover {
-            color: #ff2d55;
-          }
-        }
         a {
           font-size: 1rem;
         }

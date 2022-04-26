@@ -16,9 +16,10 @@ interface ProjectPageProps {
 }
 
 const projectStyles = css`
-  margin: 7rem 0 1rem;
+  margin: 3.5rem 0 1rem;
   padding: 0 1rem;
   @media (min-width: 40rem) {
+    margin-top: 7rem;
     margin-right: auto;
     margin-left: auto;
     max-width: 75rem;
