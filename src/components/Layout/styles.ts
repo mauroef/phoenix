@@ -6,10 +6,22 @@ export const GlobalStyles = css`
     box-sizing: border-box;
     font-family: Poppins, Helvetica, Arial, sans-serif;
     font-size: 1rem;
-  *, *:before, *:after {
+  }
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
   }
-  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul {
     margin: 0;
     padding: 0;
   }
@@ -17,10 +29,11 @@ export const GlobalStyles = css`
     background-color: #f5f5f7;
     color: #1d1d1f;
     font-weight: 400;
-    letter-spacing: -.022rem;
+    letter-spacing: -0.022rem;
     min-width: 20rem;
   }
-  ol, ul {
+  ol,
+  ul {
     list-style: none;
   }
   img {
@@ -42,5 +55,20 @@ export const GlobalStyles = css`
       height: 5rem;
       margin-bottom: 0;
     }
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #ebebeb;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #6d6d6d;
   }
 `

@@ -11,7 +11,7 @@ export const HeaderStyled = styled.header`
     background: rgba(9, 18, 37, 0.4);
     border-radius: 1.125rem;
     padding: 6rem 1rem;
-    margin: 0 1rem 0;
+    margin: 0 1rem 3rem;
     h1,
     h2 {
       color: #fff;

@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import { graphql } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 import { css, jsx } from '@emotion/react'
 import Seo from '../components/Seo'
 import Layout from '../components/Layout'
 import { Node } from '../interfaces'
-import Avatar from '../images/avatar.jpg'
 
 interface AboutPageProps {
   data: {
@@ -28,13 +28,10 @@ const aboutStyles = css`
   p {
     line-height: 1.5rem;
   }
-  div {
-    margin-bottom: 1rem;
-    img {
+  div.about-image-wrapper {
+    margin-bottom: 2rem;
+    img.about-image {
       border-radius: 50%;
-      display: block;
-      margin: 0 auto;
-      max-width: 50%;
     }
   }
   a {
@@ -56,6 +53,11 @@ const aboutStyles = css`
       line-height: 2rem;
       text-align: justify;
     }
+    div.about-image-wrapper {
+      max-width: 50%;
+      margin: 0 auto 2rem;
+      display: block;
+    }
   }
 `
 
@@ -68,9 +70,12 @@ const AboutPage: FC<AboutPageProps> = ({ data }) => {
           <h1>About</h1>
         </header>
         <section>
-          <div>
-            <img src={Avatar} />
-          </div>
+          <StaticImage
+            alt='avatar'
+            src='../images/avatar.jpg'
+            className='about-image-wrapper'
+            imgClassName='about-image'
+          />
           <p>{data.allMdx.nodes[0].frontmatter.description}</p>
           <p>
             If you want to know more about me,{' '}

@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import metaImage from '../../images/bg-projects.jpg'
 
 interface SeoProps {
   description?: string
@@ -50,6 +51,10 @@ const Seo: FC<SeoProps> = ({ description, lang, meta, title }) => {
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: metaImage,
         },
         {
           property: `og:type`,
