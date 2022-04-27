@@ -11,9 +11,10 @@ module.exports = {
   plugins: [
     'gatsby-plugin-emotion',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        trackingId: 'GTM-57377RF',
+        id: 'GTM-57377RF',
+        includeInDevelopment: true,
       },
     },
     'gatsby-plugin-image',
