@@ -36,9 +36,6 @@ const aboutStyles = css`
   }
   a {
     color: #007aff;
-    &:hover {
-      font-weight: 500;
-    }
   }
   @media (min-width: 40rem) {
     margin-top: 7rem;

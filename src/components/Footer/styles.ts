@@ -28,7 +28,6 @@ export const FooterStyled = styled.footer`
         text-decoration: none;
         &:hover {
           color: #1d1d1f;
-          font-weight: 600;
           transition: 0.3s;
         }
       }
