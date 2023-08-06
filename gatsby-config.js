@@ -6,7 +6,7 @@ module.exports = {
     description: `Hi, I'm Mauro, welcome to my Personal Portfolio.`,
     linkedin: `https://www.linkedin.com/in/mauroef`,
     github: `https://github.com/mauroef`,
-    resume: `https://bit.ly/3wrsN5Q`,
+    resume: `https://bit.ly/3OJYx0e`,
   },
   plugins: [
     'gatsby-plugin-emotion',
